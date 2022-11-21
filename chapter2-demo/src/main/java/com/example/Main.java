@@ -17,5 +17,7 @@ public class Main {
         
         Integer n = context.getBean(Integer.class);
         System.out.println(n);
+
+        context.close();
     }
 }
