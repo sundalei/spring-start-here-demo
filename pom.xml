@@ -1,67 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.example</groupId>
 
+	<artifactId>spring-start-here</artifactId>
 
-    <modelVersion>4.0.0</modelVersion>
+	<version>0.0.1-SNAPSHOT</version>
 
+	<packaging>pom</packaging>
 
-    <groupId>com.example</groupId>
+	<properties>
 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <artifactId>spring-start-here</artifactId>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+	</properties>
 
-    <version>0.0.1-SNAPSHOT</version>
+	<modules>
 
+		<module>chapter2-demo</module>
 
-    <packaging>pom</packaging>
+		<module>chapter2-demo-multi-bean-with-same-type</module>
 
+		<module>chapter2-demo-programmatically</module>
 
-    <properties>
+		<module>chapter2-demo-stereotype</module>
 
+		<module>chapter3-autowired-demo</module>
 
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<module>chapter3-bean-dependency-with-parameter</module>
 
+		<module>chapter3-demo</module>
 
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<module>chapter3-constructor-inject-demo</module>
 
+		<module>chapter3-setter-inject-demo</module>
 
-    </properties>
+		<module>chapter3-circular-demo</module>
 
+		<module>chapter3-parameter-injection-multi-bean</module>
 
-    <modules>
-
-
-        <module>chapter2-demo</module>
-
-
-        <module>chapter2-demo-multi-bean-with-same-type</module>
-
-
-        <module>chapter2-demo-programmatically</module>
-
-
-        <module>chapter2-demo-stereotype</module>
-
-
-        <module>chapter3-autowired-demo</module>
-
-
-        <module>chapter3-bean-dependency-with-parameter</module>
-
-
-        <module>chapter3-demo</module>
-
-
-        <module>chapter3-constructor-inject-demo</module>
-
-        <module>chapter3-setter-inject-demo</module>
-
-
-        <module>chapter3-circular-demo</module>
-
-    </modules>
-
+	</modules>
 
 </project>
