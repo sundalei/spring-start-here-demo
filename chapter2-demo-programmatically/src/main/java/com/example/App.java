@@ -2,8 +2,6 @@ package com.example;
 
 import java.util.function.Supplier;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionCustomizer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.config.ProjectConfig;
