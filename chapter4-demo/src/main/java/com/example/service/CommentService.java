@@ -1,5 +1,6 @@
 package com.example.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.example.model.Comment;
@@ -9,14 +10,11 @@ import com.example.repositories.CommentRepository;
 @Component
 public class CommentService {
 
-    private final CommentRepository commentRepository;
-    private final CommentNotificationProxy commentNotificationProxy;
+    @Autowired
+    private CommentRepository commentRepository;
 
-    public CommentService(CommentRepository commentRepository,
-                          CommentNotificationProxy commentNotificationProxy) {
-        this.commentRepository = commentRepository;
-        this.commentNotificationProxy = commentNotificationProxy;
-    }
+    @Autowired
+    private CommentNotificationProxy commentNotificationProxy;
 
     public void publishComment(Comment comment) {
         commentRepository.storeComment(comment);
