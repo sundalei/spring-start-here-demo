@@ -46,6 +46,7 @@
     <module>chapter3-bean-injection-with-qualifier</module>
     <module>chapter3-autowired-with-multi-beans</module>
     <module>chapter4-demo</module>
+    <module>chapter5-demo</module>
   </modules>
   
 </project>
