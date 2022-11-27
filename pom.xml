@@ -50,6 +50,7 @@
     <module>chapter5-bean-scope-stereotype</module>
     <module>chapter5-eager-instantiation</module>
     <module>chapter5-lazy-instantiation</module>
+    <module>chapter5-prototype-bean</module>
   </modules>
   
 </project>
