@@ -47,6 +47,7 @@
     <module>chapter3-autowired-with-multi-beans</module>
     <module>chapter4-demo</module>
     <module>chapter5-demo</module>
+    <module>chapter5-bean-scope-stereotype</module>
   </modules>
   
 </project>
