@@ -52,6 +52,7 @@
     <module>chapter5-lazy-instantiation</module>
     <module>chapter5-prototype-bean</module>
     <module>chapter5-prototype-autowire</module>
+    <module>chapter5-prototype-bean-processor</module>
   </modules>
   
 </project>
