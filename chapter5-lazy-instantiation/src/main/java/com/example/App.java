@@ -14,6 +14,8 @@ public class App {
         var service = c.getBean(CommentService.class);
         System.out.println("After retrieving the CommentService");
 
+        System.out.println(service);
+
         c.close();
     }
 }
