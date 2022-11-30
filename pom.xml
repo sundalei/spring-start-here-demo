@@ -59,6 +59,7 @@
     <module>chapter5-prototype-autowire</module>
     <module>chapter5-prototype-bean-processor</module>
     <module>chapter6-aspect</module>
+    <module>chapter6-aspect-alter-value</module>
   </modules>
   
 </project>
