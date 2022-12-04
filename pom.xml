@@ -63,6 +63,7 @@
     <module>chapter6-aspect-alter-parameters</module>
     <module>chapter6-aspect-annotation</module>
     <module>chapter6-aspect-afterReturning</module>
+    <module>chapter6-aspect-order</module>
   </modules>
   
 </project>
