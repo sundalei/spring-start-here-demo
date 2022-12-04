@@ -60,6 +60,7 @@
     <module>chapter5-prototype-bean-processor</module>
     <module>chapter6-aspect</module>
     <module>chapter6-aspect-alter-value</module>
+    <module>chapter6-aspect-alter-parameters</module>
   </modules>
   
 </project>
