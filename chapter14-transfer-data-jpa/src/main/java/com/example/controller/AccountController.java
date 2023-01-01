@@ -30,8 +30,7 @@ public class AccountController {
 
     @GetMapping("/accounts")
     public Iterable<Account> getAllAccounts(
-        @RequestParam(required = false) String name
-    ) {
+            @RequestParam(required = false) String name) {
         if (name == null) {
             return transferService.getAllAccounts();
         } else {
