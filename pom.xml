@@ -41,6 +41,7 @@
     <module>chapter2-demo-multi-bean-with-same-type</module>
     <module>chapter2-demo-programmatically</module>
     <module>chapter2-demo-stereotype</module>
+    <module>chapter2-demo-xml</module>
     <module>chapter3-autowired-demo</module>
     <module>chapter3-bean-dependency-with-parameter</module>
     <module>chapter3-demo</module>
