@@ -12,12 +12,15 @@ public class App {
 
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Parrot x = new Parrot();
-        x.setName("Kiki");
+        Parrot parrot = new Parrot();
+        parrot.setName("Kiki");
 
-        Supplier<Parrot> parrotSupplier = () -> x;
+        Supplier<Parrot> parrotSupplier = () -> parrot;
 
-        context.registerBean("parrot1", Parrot.class, parrotSupplier, bd -> bd.setPrimary(true));
+        context.registerBean("parrot1",
+                Parrot.class,
+                parrotSupplier,
+                bd -> bd.setPrimary(true));
 
         Parrot p = context.getBean(Parrot.class);
         System.out.println(p.getName());
