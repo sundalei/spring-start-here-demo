@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  	
+    
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
   <artifactId>spring-start-here</artifactId>
-  	
+
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  	
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -16,7 +16,7 @@
     <maven.compiler.version>3.14.1</maven.compiler.version>
     <maven.surefire.version>3.5.4</maven.surefire.version>
   </properties>
-  	
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -26,7 +26,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      			
+
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
@@ -39,7 +39,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  	
+
   <modules>
     <module>chapter2-demo</module>
     <module>chapter2-demo-multi-bean-with-same-type</module>
@@ -90,5 +90,5 @@
       </plugins>
     </pluginManagement>
   </build>
-  
+
 </project>
