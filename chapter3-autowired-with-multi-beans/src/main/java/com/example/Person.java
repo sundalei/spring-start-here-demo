@@ -10,9 +10,13 @@ public class Person {
 	
 	private final Parrot parrot;
 	
-	public Person(@Qualifier("parrot2") Parrot parrot) {
-		this.parrot = parrot;
-	}
+//	public Person(Parrot parrot1) {
+//		this.parrot = parrot1;
+//	}
+
+    public Person(@Qualifier("parrot2") Parrot parrot) {
+        this.parrot = parrot;
+    }
 
 	public String getName() {
 		return name;

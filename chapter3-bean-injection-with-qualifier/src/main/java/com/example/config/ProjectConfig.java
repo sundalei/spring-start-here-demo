@@ -23,12 +23,21 @@ public class ProjectConfig {
 		p.setName("Miki");
 		return p;
 	}
-	
-	@Bean
-	public Person person(@Qualifier("parrot2") Parrot parrot) {
-		Person p = new Person();
-		p.setName("Ella");
-		p.setParrot(parrot);
-		return p;
-	}
+
+    @Bean
+    public Person person2(Parrot parrot2) {
+        // Note: for this to work, ensure compiling with option -parameters
+        Person p = new Person();
+        p.setName("Ella");
+        p.setParrot(parrot2);
+        return p;
+    }
+
+    @Bean
+    public Person person1 (@Qualifier("parrot1") Parrot parrot) {
+        Person p = new Person();
+        p.setParrot(parrot);
+        p.setName("John");
+        return p;
+    }
 }
