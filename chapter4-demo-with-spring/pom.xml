@@ -7,9 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>chapter4-demo</artifactId>
+  <artifactId>chapter4-demo-with-spring</artifactId>
 
-  <name>chapter4-demo</name>
+  <name>chapter4-demo-with-spring</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
