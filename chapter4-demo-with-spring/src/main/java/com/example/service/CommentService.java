@@ -3,6 +3,7 @@ package com.example.service;
 import com.example.model.Comment;
 import com.example.proxies.CommentNotificationProxy;
 import com.example.repositories.CommentRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +13,7 @@ public class CommentService {
     private final CommentNotificationProxy commentNotificationProxy;
 
     public CommentService(CommentRepository commentRepository,
-                          CommentNotificationProxy commentNotificationProxy) {
+                          @Qualifier("EMAIL") CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
