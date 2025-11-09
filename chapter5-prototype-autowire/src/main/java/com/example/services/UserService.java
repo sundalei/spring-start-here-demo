@@ -1,21 +1,20 @@
 package com.example.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.repositories.CommentRepository;
 
 @Service
 public class UserService {
-    
-    @Autowired
-    private CommentRepository commentRepository;
 
-    public UserService() {
-        System.out.println("UserService instance created!");
-    }
+  private final CommentRepository commentRepository;
 
-    public CommentRepository getCommentRepository() {
-        return commentRepository;
-    }
+  public UserService(CommentRepository commentRepository) {
+    System.out.println("UserService instance created!");
+    this.commentRepository = commentRepository;
+  }
+
+  public CommentRepository getCommentRepository() {
+    return commentRepository;
+  }
 }
