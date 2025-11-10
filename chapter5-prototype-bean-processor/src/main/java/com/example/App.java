@@ -15,6 +15,8 @@ public class App {
 
         for (int i = 0; i < 5; i++) {
             Comment comment = new Comment();
+            comment.setText("comment " + i);
+            comment.setAuthor("author " + i);
             commentService.sendComment(comment);
         }
 
