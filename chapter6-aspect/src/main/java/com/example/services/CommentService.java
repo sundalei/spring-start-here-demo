@@ -1,7 +1,7 @@
 package com.example.services;
 
-import java.util.logging.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.model.Comment;
@@ -9,9 +9,9 @@ import com.example.model.Comment;
 @Service
 public class CommentService {
     
-    private Logger logger = Logger.getLogger(CommentService.class.getName());
+    private final Logger LOG = LoggerFactory.getLogger(CommentService.class);
 
     public void publishComment(Comment comment) {
-        logger.info("Publishing comment: " + comment.getText());
+      LOG.info("Publishing comment: {}", comment.getText());
     }
 }

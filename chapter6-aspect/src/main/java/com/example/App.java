@@ -7,18 +7,20 @@ import com.example.model.Comment;
 import com.example.services.CommentService;
 
 public class App {
-    public static void main(String[] args) {
 
-        var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
+  public static void main(String[] args) {
 
-        var service = c.getBean(CommentService.class);
+    var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Comment comment = new Comment();
-        comment.setText("Demo comment");
-        comment.setAuthor("Natasha");
+    var service = c.getBean(CommentService.class);
+    System.out.println(service.getClass().getName());
 
-        service.publishComment(comment);
+    Comment comment = new Comment();
+    comment.setText("Demo comment");
+    comment.setAuthor("Natasha");
 
-        c.close();
-    }
+    service.publishComment(comment);
+
+    c.close();
+  }
 }
