@@ -13,7 +13,9 @@ public class App {
     var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
     var service = c.getBean(CommentService.class);
-    System.out.println(service.getClass().getName());
+    // System.out.println(service.getClass().getName());
+    // service object is a proxy object, instead of the CommentService object
+    // the proxy object is created by Spring AOP
 
     Comment comment = new Comment();
     comment.setText("Demo comment");
