@@ -16,17 +16,6 @@ updates:
       prefix: "build(deps)"
       include: "scope"
 
-    # STRATEGY: Filter out unstable versions
-    # This tells Dependabot to ignore versions containing these text patterns
-    ignore:
-      - dependency-name: "*"
-        versions: 
-          - "*-alpha*"
-          - "*-beta*"
-          - "*-rc*"       # Release Candidates
-          - "*-M*"        # Milestones (Common in Spring/Apache projects)
-          - "*-SNAPSHOT"
-
     # Limit open PRs to prevent flooding your PR tab
     open-pull-requests-limit: 10
 
