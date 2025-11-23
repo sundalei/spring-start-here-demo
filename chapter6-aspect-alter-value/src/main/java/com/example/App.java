@@ -1,7 +1,7 @@
 package com.example;
 
-import java.util.logging.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.config.ProjectConfig;
@@ -10,7 +10,7 @@ import com.example.services.CommentService;
 
 public class App {
 
-    private static Logger logger = Logger.getLogger(App.class.getName());
+    private static Logger LOG = LoggerFactory.getLogger(App.class);
     
     public static void main(String[] args) {
 
@@ -24,7 +24,7 @@ public class App {
 
         String value = service.publishComment(comment);
 
-        logger.info(value);
+        LOG.info(value);
 
         c.close();
     }
