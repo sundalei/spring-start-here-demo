@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # 1. Maven Dependency Configuration
+  - package-ecosystem: "maven"
+    # Look for pom.xml in the root directory
+    directory: "/"
+    
+    # Check for updates once a week on Monday
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00" # UTC time
+      
+    # Customize the commit message style (optional)
+    commit-message:
+      prefix: "build(deps)"
+      include: "scope"
+
+    # STRATEGY: Filter out unstable versions
+    # This tells Dependabot to ignore versions containing these text patterns
+    ignore:
+      - dependency-name: "*"
+        versions: 
+          - "*-alpha*"
+          - "*-beta*"
+          - "*-rc*"       # Release Candidates
+          - "*-M*"        # Milestones (Common in Spring/Apache projects)
+          - "*-SNAPSHOT"
+
+    # Limit open PRs to prevent flooding your PR tab
+    open-pull-requests-limit: 10
+
+  # 2. (Optional) GitHub Actions Configuration
+  # Since you are likely using GitHub Actions for CI, it is good practice 
+  # to keep your workflow actions updated as well.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
