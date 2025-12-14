@@ -5,17 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Parrot {
-    
-    private String name;
 
-    @PostConstruct
-    public void init() {
-        System.out.println("Parrot init called.");
-        this.name = "Kiki";
-    }
+  private String name;
 
-    public String getName() {
-        return name;
-    }
+  @PostConstruct
+  public void init() {
+    System.out.println("Parrot init called.");
+    this.name = "Kiki";
+  }
 
+  public String getName() {
+    return name;
+  }
 }

@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentController {
 
-    private final PaymentProxy paymentProxy;
+  private final PaymentProxy paymentProxy;
 
-    public PaymentController(PaymentProxy paymentProxy) {
-        this.paymentProxy = paymentProxy;
-    }
+  public PaymentController(PaymentProxy paymentProxy) {
+    this.paymentProxy = paymentProxy;
+  }
 
-    @PostMapping("/payment")
-    public Payment createPayment(
-            @RequestBody Payment payment
-    ) {
-        return paymentProxy.createPayment(payment);
-    }
+  @PostMapping("/payment")
+  public Payment createPayment(@RequestBody Payment payment) {
+    return paymentProxy.createPayment(payment);
+  }
 }

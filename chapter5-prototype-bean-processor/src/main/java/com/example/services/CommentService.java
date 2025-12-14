@@ -1,10 +1,9 @@
 package com.example.services;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Service;
-
 import com.example.model.Comment;
 import com.example.processor.CommentProcessor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CommentService {

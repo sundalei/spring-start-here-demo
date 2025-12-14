@@ -23,9 +23,6 @@ public class Comment {
 
   @Override
   public String toString() {
-    return "Comment{" +
-        "author='" + author + '\'' +
-        ", text='" + text + '\'' +
-        '}';
+    return "Comment{" + "author='" + author + '\'' + ", text='" + text + '\'' + '}';
   }
 }

@@ -1,10 +1,9 @@
 package com.example;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.example.config.ProjectConfig;
 import com.example.model.Comment;
 import com.example.services.CommentService;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
 

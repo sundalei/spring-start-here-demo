@@ -1,11 +1,10 @@
 package com.example.processor;
 
+import com.example.model.Comment;
 import com.example.repository.CommentRepository;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
-import com.example.model.Comment;
 
 @Component
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)

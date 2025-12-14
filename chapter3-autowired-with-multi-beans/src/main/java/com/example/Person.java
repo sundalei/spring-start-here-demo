@@ -5,28 +5,28 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-    
-    private String name = "Ella";
-    
-    private final Parrot parrot;
-    
-//    public Person(Parrot parrot1) {
-//        this.parrot = parrot1;
-//    }
 
-    public Person(@Qualifier("parrot2") Parrot parrot) {
-        this.parrot = parrot;
-    }
+  private String name = "Ella";
 
-    public String getName() {
-        return name;
-    }
+  private final Parrot parrot;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  //    public Person(Parrot parrot1) {
+  //        this.parrot = parrot1;
+  //    }
 
-    public Parrot getParrot() {
-        return parrot;
-    }
+  public Person(@Qualifier("parrot2") Parrot parrot) {
+    this.parrot = parrot;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Parrot getParrot() {
+    return parrot;
+  }
 }

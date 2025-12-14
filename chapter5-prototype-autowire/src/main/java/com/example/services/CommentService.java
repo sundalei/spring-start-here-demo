@@ -1,8 +1,7 @@
 package com.example.services;
 
-import org.springframework.stereotype.Service;
-
 import com.example.repositories.CommentRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CommentService {

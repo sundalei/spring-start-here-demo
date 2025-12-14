@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CommentRepository {
-    
-    public CommentRepository() {
-        System.out.println("CommentRepository instance created!");
-    }
+
+  public CommentRepository() {
+    System.out.println("CommentRepository instance created!");
+  }
 }

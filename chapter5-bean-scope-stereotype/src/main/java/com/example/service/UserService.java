@@ -1,19 +1,18 @@
 package com.example.service;
 
-import org.springframework.stereotype.Service;
-
 import com.example.repository.CommentRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    
-    private final CommentRepository commentRepository;
 
-    public UserService(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
-    }
+  private final CommentRepository commentRepository;
 
-    public CommentRepository getCommentRepository() {
-        return commentRepository;
-    }
+  public UserService(CommentRepository commentRepository) {
+    this.commentRepository = commentRepository;
+  }
+
+  public CommentRepository getCommentRepository() {
+    return commentRepository;
+  }
 }
