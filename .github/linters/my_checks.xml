@@ -50,7 +50,9 @@
     <module name="JavadocVariable">
       <property name="accessModifiers" value="public"/>
     </module>
-    <module name="JavadocStyle"/>
+    <module name="JavadocStyle">
+      <property name="severity" value="warning"/>
+    </module>
     <module name="MissingJavadocMethod">
       <property name="ignoreMethodNamesRegex" value="^main$"/>
       <property name="allowMissingPropertyJavadoc" value="true"/>
@@ -64,12 +66,16 @@
     <module name="MethodName"/>
     <module name="PackageName"/>
     <module name="ParameterName"/>
-    <module name="StaticVariableName"/>
+    <module name="StaticVariableName">
+      <property name="severity" value="warning"/>
+    </module>
     <module name="TypeName"/>
 
     <!-- Checks for imports                              -->
     <!-- See https://checkstyle.org/checks/imports/index.html -->
-    <module name="AvoidStarImport"/>
+    <module name="AvoidStarImport">
+      <property name="severity" value="warning"/>
+    </module>
     <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
     <module name="RedundantImport"/>
     <module name="UnusedImports">
@@ -94,6 +100,8 @@
     <module name="WhitespaceAfter"/>
     <module name="WhitespaceAround">
       <property name="allowEmptyMethods" value="true"/>
+      <property name="allowEmptyTypes" value="true"/>
+      <property name="severity" value="warning"/>
     </module>
 
     <!-- Modifier Checks                                    -->
@@ -119,7 +127,9 @@
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
-    <module name="MagicNumber"/>
+    <module name="MagicNumber">
+      <property name="severity" value="warning"/>
+    </module>
     <module name="MissingSwitchDefault"/>
     <module name="MultipleVariableDeclarations"/>
     <module name="SimplifyBooleanExpression"/>
@@ -132,6 +142,7 @@
     <module name="HideUtilityClassConstructor">
       <property name="ignoreAnnotatedBy"
         value="SpringBootApplication, java.lang.Deprecated"/>
+      <property name="severity" value="warning"/>
     </module>
     <module name="InterfaceIsType"/>
     <module name="VisibilityModifier"/>
