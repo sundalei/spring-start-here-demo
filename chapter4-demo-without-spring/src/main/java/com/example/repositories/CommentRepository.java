@@ -4,5 +4,5 @@ import com.example.model.Comment;
 
 public interface CommentRepository {
 
-    void storeComment(Comment comment);
+  void storeComment(Comment comment);
 }

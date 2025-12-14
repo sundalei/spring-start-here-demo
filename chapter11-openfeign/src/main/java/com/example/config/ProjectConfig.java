@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableFeignClients(basePackages = "com.example.proxy")
 @Configuration
-public class ProjectConfig {
-}
+public class ProjectConfig {}

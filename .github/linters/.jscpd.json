@@ -7,7 +7,8 @@
     "**/*DTO.java",
     "**/*Dto.java",
     "**/*Entity.java",
-    "**/config/**"
+    "**/config/**",
+    "**/pom.xml"
   ],
   "minLines": 5,
   "maxLines": 500

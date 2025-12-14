@@ -1,31 +1,30 @@
 package com.example;
 
+import com.example.config.ProjectConfig;
+import com.example.model.Comment;
+import com.example.services.CommentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.example.config.ProjectConfig;
-import com.example.model.Comment;
-import com.example.services.CommentService;
-
 public class App {
 
-    private static Logger LOG = LoggerFactory.getLogger(App.class);
-    
-    public static void main(String[] args) {
+  private static Logger LOG = LoggerFactory.getLogger(App.class);
 
-        var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
+  public static void main(String[] args) {
 
-        var service = c.getBean(CommentService.class);
+    var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Comment comment = new Comment();
-        comment.setText("Demo comment");
-        comment.setAuthor("Natasha");
+    var service = c.getBean(CommentService.class);
 
-        String value = service.publishComment(comment);
+    Comment comment = new Comment();
+    comment.setText("Demo comment");
+    comment.setAuthor("Natasha");
 
-        LOG.info(value);
+    String value = service.publishComment(comment);
 
-        c.close();
-    }
+    LOG.info(value);
+
+    c.close();
+  }
 }

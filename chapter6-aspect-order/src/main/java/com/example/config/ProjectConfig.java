@@ -9,14 +9,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(basePackages = "com.example.services")
 @EnableAspectJAutoProxy
 public class ProjectConfig {
-    
-    @Bean
-    public LoggingAspect loggingAspect() {
-        return new LoggingAspect();
-    }
 
-    @Bean
-    public SecurityAspect securityAspect() {
-        return new SecurityAspect();
-    }
+  @Bean
+  public LoggingAspect loggingAspect() {
+    return new LoggingAspect();
+  }
+
+  @Bean
+  public SecurityAspect securityAspect() {
+    return new SecurityAspect();
+  }
 }

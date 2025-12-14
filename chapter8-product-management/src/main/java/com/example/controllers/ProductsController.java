@@ -1,44 +1,40 @@
 package com.example.controllers;
 
+import com.example.model.Product;
+import com.example.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.model.Product;
-import com.example.service.ProductService;
-
 @Controller
 public class ProductsController {
-    
-    private final ProductService productService;
 
-    public ProductsController(ProductService productService) {
-        this.productService = productService;
-    }
+  private final ProductService productService;
 
-    @GetMapping("/products")
-    public String viewProducts(Model model) {
-        var products = productService.findAll();
-        model.addAttribute("products", products);
+  public ProductsController(ProductService productService) {
+    this.productService = productService;
+  }
 
-        return "products.html";
-    }
+  @GetMapping("/products")
+  public String viewProducts(Model model) {
+    var products = productService.findAll();
+    model.addAttribute("products", products);
 
-    @PostMapping(path = "/products")
-    public String addProduct(
-        @RequestParam String name,
-        @RequestParam double price,
-        Model model) {
-        Product p = new Product();
-        p.setName(name);
-        p.setPrice(price);
-        productService.addProduct(p);
+    return "products.html";
+  }
 
-        var products = productService.findAll();
-        model.addAttribute("products", products);
+  @PostMapping(path = "/products")
+  public String addProduct(@RequestParam String name, @RequestParam double price, Model model) {
+    Product p = new Product();
+    p.setName(name);
+    p.setPrice(price);
+    productService.addProduct(p);
 
-        return "products.html";
-    }
+    var products = productService.findAll();
+    model.addAttribute("products", products);
+
+    return "products.html";
+  }
 }

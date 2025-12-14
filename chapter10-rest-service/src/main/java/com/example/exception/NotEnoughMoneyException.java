@@ -1,5 +1,3 @@
 package com.example.exception;
 
-public class NotEnoughMoneyException extends RuntimeException {
-    
-}
+public class NotEnoughMoneyException extends RuntimeException {}

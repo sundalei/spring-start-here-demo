@@ -1,27 +1,26 @@
 package com.example;
 
+import com.example.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.example.config.ProjectConfig;
-
 public class App {
-	
-	public static void main(String[] args) {
-		
-		var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-		
-		Parrot p = context.getBean("parrot1", Parrot.class);
-		
-		System.out.println(p.getName());
 
-        p = context.getBean(Parrot.class);
+  public static void main(String[] args) {
 
-        System.out.println(p.getName());
+    var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        p = context.getBean("riki", Parrot.class);
+    Parrot p = context.getBean("parrot1", Parrot.class);
 
-        System.out.println(p.getName());
+    System.out.println(p.getName());
 
-		context.close();
-	}
+    p = context.getBean(Parrot.class);
+
+    System.out.println(p.getName());
+
+    p = context.getBean("riki", Parrot.class);
+
+    System.out.println(p.getName());
+
+    context.close();
+  }
 }
