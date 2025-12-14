@@ -39,13 +39,13 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           VALIDATE_TRIVY: false
           VALIDATE_JSCPD: false
+          VALIDATE_SQLFLUFF: false
           FIX_MARKDOWN_PRETTIER: true
           FIX_HTML_PRETTIER: true
           FIX_YAML_PRETTIER: true
           FIX_GOOGLE_JAVA_FORMAT: true
           FIX_JSON_PRETTIER: true
           FIX_BIOME_FORMAT: true
-          FIX_SQLFLUFF: true
 
       - name: Commit and push linting fixes
         if: >
