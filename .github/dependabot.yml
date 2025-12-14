@@ -10,6 +10,8 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00" # UTC time
+    cooldown:
+      default-days: 7
 
     # Limit open PRs to prevent flooding your PR tab
     open-pull-requests-limit: 10
