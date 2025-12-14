@@ -62,7 +62,9 @@
     <module name="ConstantName"/>
     <module name="LocalFinalVariableName"/>
     <module name="LocalVariableName"/>
-    <module name="MemberName"/>
+    <module name="MemberName">
+      <property name="severity" value="warning"/>
+    </module>
     <module name="MethodName"/>
     <module name="PackageName"/>
     <module name="ParameterName"/>
@@ -124,6 +126,7 @@
     <module name="HiddenField">
       <property name="ignoreConstructorParameter" value="true"/>
       <property name="ignoreSetter" value="true"/>
+      <property name="severity" value="warning"/>
     </module>
     <module name="IllegalInstantiation"/>
     <module name="InnerAssignment"/>
