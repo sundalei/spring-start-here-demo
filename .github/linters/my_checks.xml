@@ -47,7 +47,9 @@
     <module name="InvalidJavadocPosition"/>
     <module name="JavadocMethod"/>
     <module name="JavadocType"/>
-    <module name="JavadocVariable"/>
+    <module name="JavadocVariable">
+      <property name="accessModifiers" value="public"/>
+    </module>
     <module name="JavadocStyle"/>
     <module name="MissingJavadocMethod">
       <property name="ignoreMethodNamesRegex" value="^main$"/>
