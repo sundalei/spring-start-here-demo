@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Chapter8TemplateDemoApplication {
+public class Application {
 
   public static void main(String[] args) {
-    SpringApplication.run(Chapter8TemplateDemoApplication.class, args);
+    SpringApplication.run(Application.class, args);
   }
 }
