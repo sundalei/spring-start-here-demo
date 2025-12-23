@@ -12,6 +12,7 @@
   <modules>
     <module>chapter7-first-web</module>
     <module>chapter8-template-demo</module>
+    <module>chapter8-product-management</module>
   </modules>
 
   <properties>
