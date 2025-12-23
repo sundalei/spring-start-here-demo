@@ -11,6 +11,7 @@
 
   <modules>
     <module>chapter7-first-web</module>
+    <module>chapter8-template-demo</module>
   </modules>
 
   <properties>
@@ -19,6 +20,7 @@
     <spring-boot.version>4.0.1</spring-boot.version>
     <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
+    <spotless.version>3.1.0</spotless.version>
   </properties>
 
   <dependencyManagement>
@@ -65,6 +67,28 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring-boot.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>${spotless.version}</version>
+          <configuration>
+            <java>
+              <googleJavaFormat>
+                <style>GOOGLE</style>
+                <reflowLongStrings>true</reflowLongStrings>
+                <formatJavadoc>true</formatJavadoc>
+              </googleJavaFormat>
+            </java>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <phase>compile</phase>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
