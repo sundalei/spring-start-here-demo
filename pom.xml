@@ -17,72 +17,12 @@
     <maven.surefire.version>3.5.4</maven.surefire.version>
     <logback-classic.version>1.5.23</logback-classic.version>
     <slf4j-api.version>2.0.17</slf4j-api.version>
+    <jakarta-annotation.api>3.0.0</jakarta-annotation.api>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>${junit.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-aspects</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
-        <version>${logback-classic.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>${slf4j-api.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <modules>
-    <module>chapter2-demo</module>
-    <module>chapter2-demo-multi-bean-with-same-type</module>
-    <module>chapter2-demo-programmatically</module>
-    <module>chapter2-demo-stereotype</module>
-    <module>chapter2-demo-xml</module>
-    <module>chapter3-autowired-demo</module>
-    <module>chapter3-bean-dependency-with-parameter</module>
-    <module>chapter3-demo</module>
-    <module>chapter3-constructor-inject-demo</module>
-    <module>chapter3-setter-inject-demo</module>
-    <module>chapter3-circular-demo</module>
-    <module>chapter3-parameter-injection-multi-bean</module>
-    <module>chapter3-bean-injection-with-qualifier</module>
-    <module>chapter3-autowired-with-multi-beans</module>
-    <module>chapter4-demo-without-spring</module>
-    <module>chapter4-demo-with-spring</module>
-    <module>chapter5-demo</module>
-    <module>chapter5-bean-scope-stereotype</module>
-    <module>chapter5-eager-instantiation</module>
-    <module>chapter5-lazy-instantiation</module>
-    <module>chapter5-prototype-bean</module>
-    <module>chapter5-prototype-autowire</module>
-    <module>chapter5-prototype-bean-processor</module>
-    <module>chapter6-aspect</module>
-    <module>chapter6-aspect-alter-value</module>
-    <module>chapter6-aspect-alter-parameters</module>
-    <module>chapter6-aspect-annotation</module>
-    <module>chapter6-aspect-afterReturning</module>
-    <module>chapter6-aspect-order</module>
+    <module>spring-core-demos</module>
+    <module>spring-boot-demos</module>
   </modules>
 
   <build>
