@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>spring-start-here</artifactId>
+    <groupId>com.example</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>spring-core-demos</artifactId>
+  <name>spring-core-demos</name>
+  <packaging>pom</packaging>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback-classic.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.annotation</groupId>
+        <artifactId>jakarta.annotation-api</artifactId>
+        <version>${jakarta-annotation.api}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>chapter2-demo</module>
+    <module>chapter2-demo-multi-bean-with-same-type</module>
+    <module>chapter2-demo-programmatically</module>
+    <module>chapter2-demo-stereotype</module>
+    <module>chapter2-demo-xml</module>
+    <module>chapter3-autowired-demo</module>
+    <module>chapter3-bean-dependency-with-parameter</module>
+    <module>chapter3-demo</module>
+    <module>chapter3-constructor-inject-demo</module>
+    <module>chapter3-setter-inject-demo</module>
+    <module>chapter3-circular-demo</module>
+    <module>chapter3-parameter-injection-multi-bean</module>
+    <module>chapter3-bean-injection-with-qualifier</module>
+    <module>chapter3-autowired-with-multi-beans</module>
+    <module>chapter4-demo-without-spring</module>
+    <module>chapter4-demo-with-spring</module>
+    <module>chapter5-demo</module>
+    <module>chapter5-bean-scope-stereotype</module>
+    <module>chapter5-eager-instantiation</module>
+    <module>chapter5-lazy-instantiation</module>
+    <module>chapter5-prototype-bean</module>
+    <module>chapter5-prototype-autowire</module>
+    <module>chapter5-prototype-bean-processor</module>
+    <module>chapter6-aspect</module>
+    <module>chapter6-aspect-alter-value</module>
+    <module>chapter6-aspect-alter-parameters</module>
+    <module>chapter6-aspect-annotation</module>
+    <module>chapter6-aspect-afterReturning</module>
+    <module>chapter6-aspect-order</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven.compiler.version}</version>
+          <configuration>
+            <release>21</release>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven.surefire.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
