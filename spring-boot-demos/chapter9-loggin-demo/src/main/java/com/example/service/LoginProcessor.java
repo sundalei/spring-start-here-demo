@@ -1,10 +1,12 @@
 package com.example.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
 @Component
 @RequestScope
+@Slf4j
 public class LoginProcessor {
 
   private final LoggedUserManagementService loggedUserManagementService;
@@ -28,6 +30,7 @@ public class LoginProcessor {
 
     boolean loginResult = false;
     if ("natalie".equals(username) && "password".equals(password)) {
+      log.debug("LoggedUserManagementService {}", loggedUserManagementService.hashCode());
       loginResult = true;
       loggedUserManagementService.setUsername(username);
     }

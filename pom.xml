@@ -18,6 +18,7 @@
     <logback-classic.version>1.5.23</logback-classic.version>
     <slf4j-api.version>2.0.17</slf4j-api.version>
     <jakarta-annotation.api>3.0.0</jakarta-annotation.api>
+    <lombok.version>1.18.42</lombok.version>
   </properties>
 
   <modules>
