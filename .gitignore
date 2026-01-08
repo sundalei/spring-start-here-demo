@@ -5,3 +5,5 @@
 **/.settings/
 **/.idea
 .DS_Store
+github_conf/
+super-linter-output/
