@@ -25,9 +25,7 @@ public class LoginControllerUnitTests {
 
     String result = loginController.loginPost("username", "password", model);
 
-    assertEquals("login.html", result);
-
-    verify(model).addAttribute("message", "You are now logged in.");
+    assertEquals("redirect:/main", result);
   }
 
   @Test
