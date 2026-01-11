@@ -1,4 +1,4 @@
-package com.example;
+package com.example.controller;
 
 import com.example.model.Country;
 import java.util.List;
@@ -13,7 +13,6 @@ public class CountryController {
   @GetMapping("/france")
   public ResponseEntity<Country> france() {
     Country c = Country.of("France", 67);
-    // return c;
     return ResponseEntity.status(HttpStatus.ACCEPTED)
         .header("continent", "Europe")
         .header("capital", "Paris")
