@@ -2,7 +2,6 @@ package com.example.controller;
 
 import com.example.model.PaymentDetails;
 import com.example.service.PaymentService;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
