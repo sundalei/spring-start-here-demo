@@ -12,5 +12,5 @@ public interface PaymentProxy {
 
   @PostMapping("/payment")
   ResponseEntity<Payment> createPayment(
-      @RequestHeader String requestId, @RequestBody Payment payment);
+      @RequestHeader("requestId") String requestId, @RequestBody Payment payment);
 }
