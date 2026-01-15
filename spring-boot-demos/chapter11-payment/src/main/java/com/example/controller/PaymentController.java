@@ -2,8 +2,7 @@ package com.example.controller;
 
 import com.example.model.Payment;
 import java.util.UUID;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Slf4j
 public class PaymentController {
-
-  private static Logger LOGGER = LoggerFactory.getLogger(PaymentController.class);
 
   @PostMapping("/payment")
   public ResponseEntity<Payment> createPayment(
       @RequestHeader String requestId, @RequestBody Payment payment) {
-    LOGGER.info(
-        "Received request with ID " + requestId + " ; Payment Amount: " + payment.getAmount());
+    log.info("Received request with ID {} ; Payment Amount: {}", requestId, payment.amount());
 
-    payment.setId(UUID.randomUUID().toString());
+    Payment processedPayment = new Payment(UUID.randomUUID().toString(), payment.amount());
 
-    return ResponseEntity.status(HttpStatus.OK).header("requestId", requestId).body(payment);
+    return ResponseEntity.status(HttpStatus.OK)
+        .header("requestId", requestId)
+        .body(processedPayment);
   }
 }

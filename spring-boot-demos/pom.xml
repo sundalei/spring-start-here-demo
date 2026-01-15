@@ -18,6 +18,7 @@
     <module>chapter8-product-management</module>
     <module>chapter9-loggin-demo</module>
     <module>chapter10-rest-service</module>
+    <module>chapter11-payment</module>
   </modules>
 
   <properties>
