@@ -16,7 +16,7 @@ public class PaymentController {
 
   @PostMapping("/payment")
   public ResponseEntity<Payment> createPayment(
-      @RequestHeader String requestId, @RequestBody Payment payment) {
+      @RequestHeader("requestId") String requestId, @RequestBody Payment payment) {
     log.info("Received request with ID {} ; Payment Amount: {}", requestId, payment.amount());
 
     Payment processedPayment = new Payment(UUID.randomUUID().toString(), payment.amount());
