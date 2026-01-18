@@ -20,6 +20,7 @@
     <module>chapter10-rest-service</module>
     <module>chapter11-payment</module>
     <module>chapter11-openfeign</module>
+    <module>chapter11-resttemplate</module>
   </modules>
 
   <properties>
