@@ -21,12 +21,14 @@
     <module>chapter11-payment</module>
     <module>chapter11-openfeign</module>
     <module>chapter11-resttemplate</module>
+    <module>chapter11-webclient</module>
   </modules>
 
   <properties>
     <spring-boot.version>4.0.1</spring-boot.version>
     <spring-cloud.version>2025.1.0</spring-cloud.version>
     <spotless.version>3.1.0</spotless.version>
+    <netty.version>4.2.9.Final</netty.version>
   </properties>
 
   <dependencyManagement>
