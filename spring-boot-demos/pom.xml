@@ -22,6 +22,7 @@
     <module>chapter11-openfeign</module>
     <module>chapter11-resttemplate</module>
     <module>chapter11-webclient</module>
+    <module>chapter12-purchase-jdbctemplate</module>
   </modules>
 
   <properties>
