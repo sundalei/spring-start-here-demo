@@ -7,3 +7,4 @@
 .DS_Store
 github_conf/
 super-linter-output/
+spring-boot-demos/chapter12-purchase-jdbctemplate/src/main/resources/application-mysql-copy.properties
