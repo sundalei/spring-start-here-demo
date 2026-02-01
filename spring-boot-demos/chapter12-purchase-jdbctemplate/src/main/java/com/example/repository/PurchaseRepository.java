@@ -2,23 +2,22 @@ package com.example.repository;
 
 import com.example.model.Purchase;
 import java.util.List;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class PurchaseRepository {
 
-  private final JdbcTemplate jdbc;
+  private final JdbcClient jdbc;
 
-  public PurchaseRepository(JdbcTemplate jdbc) {
+  public PurchaseRepository(JdbcClient jdbc) {
     this.jdbc = jdbc;
   }
 
   public void storePurchase(Purchase purchase) {
     String sql = "INSERT INTO purchase VALUES (NULL, ?, ?)";
-
-    jdbc.update(sql, purchase.getProduct(), purchase.getPrice());
+    jdbc.sql(sql).param(purchase.getProduct()).param(purchase.getPrice()).update();
   }
 
   public List<Purchase> findAllPurchase() {
@@ -33,6 +32,6 @@ public class PurchaseRepository {
           return rowObject;
         };
 
-    return jdbc.query(sql, purchaseRowMapper);
+    return jdbc.sql(sql).query(purchaseRowMapper).list();
   }
 }
