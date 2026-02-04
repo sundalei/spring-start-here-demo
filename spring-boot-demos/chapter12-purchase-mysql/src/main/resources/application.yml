@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost/spring_quickly?useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password: oarnud9I
+    username: dalei
+    password: oarnud9I*test
   sql:
     init:
       mode: always
