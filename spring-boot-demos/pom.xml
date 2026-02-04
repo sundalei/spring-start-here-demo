@@ -24,6 +24,9 @@
     <module>chapter11-webclient</module>
     <module>chapter12-purchase-jdbctemplate</module>
     <module>chapter12-purchase-mysql</module>
+    <module>chapter12-datasource-custom</module>
+    <module>chapter13-transaction</module>
+    <module>chapter14-transfer-data-jpa</module>
   </modules>
 
   <properties>
