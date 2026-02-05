@@ -19,7 +19,7 @@ public class ProjectConfig {
   private String datasourcePassword;
 
   @Bean
-  public DataSource dataSource() {
+  DataSource dataSource() {
     HikariDataSource dataSource = new HikariDataSource();
     dataSource.setJdbcUrl(datasourceUrl);
     dataSource.setUsername(datasourceUsername);
