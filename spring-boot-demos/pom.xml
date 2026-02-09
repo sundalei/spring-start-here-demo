@@ -32,7 +32,7 @@
   <properties>
     <spring-boot.version>4.0.2</spring-boot.version>
     <spring-cloud.version>2025.1.0</spring-cloud.version>
-    <spotless.version>3.2.0</spotless.version>
+    <spotless.version>3.2.1</spotless.version>
     <netty.version>4.2.9.Final</netty.version>
   </properties>
 
