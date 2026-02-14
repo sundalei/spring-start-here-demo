@@ -18,16 +18,25 @@ public class TransferService {
 
   @Transactional
   public void transferMoney(long idSender, long idReceiver, BigDecimal amount) {
+    if (amount.compareTo(BigDecimal.ZERO) < 0) {
+      throw new IllegalArgumentException("Transfer amount must be positive");
+    }
+    if (idSender == idReceiver) {
+      throw new IllegalArgumentException("Sender and Receiver cannot be the same");
+    }
+
     Account sender = accountRepository.findAccountById(idSender);
     Account receiver = accountRepository.findAccountById(idReceiver);
 
-    BigDecimal senderNewAmount = sender.getAmount().subtract(amount);
-    BigDecimal receiverNewAmount = receiver.getAmount().add(amount);
+    if (sender.amount().compareTo(amount) < 0) {
+      throw new IllegalArgumentException("Sender has insufficient funds");
+    }
+
+    BigDecimal senderNewAmount = sender.amount().subtract(amount);
+    BigDecimal receiverNewAmount = receiver.amount().add(amount);
 
     accountRepository.changeAmount(idSender, senderNewAmount);
     accountRepository.changeAmount(idReceiver, receiverNewAmount);
-
-    throw new RuntimeException("Oh no! Something went wrong!");
   }
 
   public List<Account> getAllAccounts() {

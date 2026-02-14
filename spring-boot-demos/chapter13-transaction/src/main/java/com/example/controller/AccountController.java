@@ -21,7 +21,7 @@ public class AccountController {
   @PostMapping("/transfer")
   public void transferMoney(@RequestBody TransferRequest request) {
     transferService.transferMoney(
-        request.getSenderAccountId(), request.getReceiverAccountId(), request.getAmount());
+        request.senderAccountId(), request.receiverAccountId(), request.amount());
   }
 
   @GetMapping("/accounts")
