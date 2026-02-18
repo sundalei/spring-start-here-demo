@@ -42,4 +42,8 @@ public class TransferService {
   public List<Account> findAccountsByName(String name) {
     return accountRepository.findAccountsByName(name);
   }
+
+  public List<Account> findAccountsByNamePattern(String namePattern) {
+    return accountRepository.findAccountsByNamePattern(namePattern);
+  }
 }

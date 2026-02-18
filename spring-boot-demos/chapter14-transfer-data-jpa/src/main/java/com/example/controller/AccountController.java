@@ -21,15 +21,19 @@ public class AccountController {
   @PostMapping("/transfer")
   public void transferMoney(@RequestBody TransferRequest request) {
     transferService.transferMoney(
-        request.getSenderAccountId(), request.getReceiverAccountId(), request.getAmount());
+        request.senderAccountId(), request.receiverAccountId(), request.amount());
   }
 
   @GetMapping("/accounts")
-  public Iterable<Account> getAllAccounts(@RequestParam(required = false) String name) {
-    if (name == null) {
-      return transferService.getAllAccounts();
-    } else {
+  public Iterable<Account> getAllAccounts(
+      @RequestParam(required = false) String name,
+      @RequestParam(required = false) String namePattern) {
+    if (namePattern != null) {
+      return transferService.findAccountsByNamePattern(namePattern);
+    } else if (name != null) {
       return transferService.findAccountsByName(name);
+    } else {
+      return transferService.getAllAccounts();
     }
   }
 }

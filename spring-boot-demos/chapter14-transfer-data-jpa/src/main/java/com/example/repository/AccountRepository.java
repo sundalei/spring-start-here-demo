@@ -12,6 +12,9 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
   @Query("SELECT * FROM account WHERE name = :name")
   List<Account> findAccountsByName(String name);
 
+  @Query("SELECT * FROM account WHERE name LIKE :namePattern")
+  List<Account> findAccountsByNamePattern(String namePattern);
+
   @Modifying
   @Query("UPDATE account SET amount = :amount WHERE id = :id")
   void changeAmount(long id, BigDecimal amount);
