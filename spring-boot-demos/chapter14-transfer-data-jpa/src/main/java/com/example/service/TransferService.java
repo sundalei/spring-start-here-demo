@@ -21,10 +21,20 @@ public class TransferService {
   public void transferMoney(long idSender, long idReceiver, BigDecimal amount) {
 
     Account sender =
-        accountRepository.findById(idSender).orElseThrow(() -> new AccountNotFoundException());
+        accountRepository
+            .findById(idSender)
+            .orElseThrow(
+                () ->
+                    new AccountNotFoundException(
+                        "Account with sender id " + idSender + " not found"));
 
     Account receiver =
-        accountRepository.findById(idReceiver).orElseThrow(() -> new AccountNotFoundException());
+        accountRepository
+            .findById(idReceiver)
+            .orElseThrow(
+                () ->
+                    new AccountNotFoundException(
+                        "Account with receiver id " + idReceiver + " not found"));
 
     BigDecimal senderNewAmount = sender.getAmount().subtract(amount);
 
