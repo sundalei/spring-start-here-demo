@@ -36,6 +36,10 @@ public class TransferService {
                     new AccountNotFoundException(
                         "Account with receiver id " + idReceiver + " not found"));
 
+    if (sender.getAmount().compareTo(amount) < 0) {
+      throw new RuntimeException("Account sender has no enough money");
+    }
+
     BigDecimal senderNewAmount = sender.getAmount().subtract(amount);
 
     BigDecimal receiverNewAmount = receiver.getAmount().add(amount);

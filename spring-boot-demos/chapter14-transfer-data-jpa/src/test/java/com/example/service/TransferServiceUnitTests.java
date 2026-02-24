@@ -82,4 +82,29 @@ public class TransferServiceUnitTests {
     assertEquals("Account with receiver id 2 not found", exception.getMessage());
     verify(accountRepository, never()).changeAmount(anyLong(), any(BigDecimal.class));
   }
+
+  @Test
+  @DisplayName("Test the change amount is not happen if sender has no enough money")
+  public void moneyTransferHasNoEnoughMoney() {
+    Account sender = new Account();
+    sender.setId(1);
+    sender.setAmount(new BigDecimal(1000));
+
+    Account destination = new Account();
+    destination.setId(2);
+    destination.setAmount(new BigDecimal(1000));
+
+    given(accountRepository.findById(sender.getId())).willReturn(Optional.of(sender));
+
+    given(accountRepository.findById(destination.getId())).willReturn(Optional.of(destination));
+
+    RuntimeException exception =
+        assertThrows(
+            RuntimeException.class,
+            () ->
+                transferService.transferMoney(
+                    sender.getId(), destination.getId(), new BigDecimal(1500)));
+    assertEquals("Account sender has no enough money", exception.getMessage());
+    verify(accountRepository, never()).changeAmount(anyLong(), any(BigDecimal.class));
+  }
 }
