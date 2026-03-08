@@ -24,7 +24,7 @@ public class ProjectConfig {
     dataSource.setJdbcUrl(datasourceUrl);
     dataSource.setUsername(datasourceUsername);
     dataSource.setPassword(datasourcePassword);
-    dataSource.setConnectionTimeout(1000);
+    dataSource.setConnectionTimeout(10000);
 
     return dataSource;
   }
