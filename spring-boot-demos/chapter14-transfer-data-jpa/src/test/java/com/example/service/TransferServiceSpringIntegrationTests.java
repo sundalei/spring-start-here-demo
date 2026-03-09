@@ -17,7 +17,12 @@ public class TransferServiceSpringIntegrationTests {
 
   @MockitoBean private AccountRepository accountRepository;
 
-  @Autowired private TransferService transferService;
+  private final TransferService transferService;
+
+  @Autowired
+  public TransferServiceSpringIntegrationTests(TransferService transferService) {
+    this.transferService = transferService;
+  }
 
   @Test
   public void transferServiceTransferAmountTest() {
